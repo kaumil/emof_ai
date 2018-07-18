@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!--<link rel="stylesheet" href="../../../../Dhrumil Sheth/Desktop/Final_Year_Project/sba_demo.css" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/sba_demo.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/flat.scss') }}">
+</head>
+<body>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b>em</b><b class="">of.<b class="text-secondary">a</b><b class="text-secondary">i</b>&nbsp;</b>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center" style="background-image: url('static/images/6.jpg');background-size: cover;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="mb-4 display-4 text-dark"><b class="text-primary">&nbsp; &nbsp; <b class="text-primary">&nbsp;Emotion, Age and Gender Classification</b></b>
+          </h1>
+          <p class="lead mb-5 text-secondary"><b>Upload your own video and will give statistics on expressions, grouped by age</b>
+            <br>
+          </p>
+
+          <form action="/detect" method='POST' enctype="multipart/form-data">
+
+            <input type="file" style="font-face: 'Comic Sans MS'; font-size: larger; color: black; background-color:#FFFFFF; border: 3pt ridge lightgrey"  class="btn btn-lg btn-secondary" name="file" id="file_upload">
+            <input type="submit" class="btn btn-lg btn-secondary" value="Upload" id="btn_upload">
+
+        </form>
+          <!--<a href="#" class="btn btn-lg btn-secondary">Upload your own video</a>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-7">
+          <h2 class="text-primary">Video Processing</h2>
+          <p class="">Convolutional Neural Network detects face and recognizes it. It classifies emotion of the person amongst 7 emotions as well as classifies the age group of the person as well as the gender.</p>
+        </div>
+        <div class="col-md-5 align-self-center">
+          <img class="img-fluid d-block w-100 img-thumbnail" src="{{url_for('static',filename='images/1.png')}}" alt="" height="150px" width="150px"> </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <img class="img-fluid d-block mb-4 w-100 img-thumbnail" src="{{url_for('static',filename='images/graph.jpg')}}" alt="" height="50px" width="50px"> </div>
+        <div class="col-md-7">
+          <h2 class="text-primary pt-3">Video Analysis Graph</h2>
+          <p class="">The video analysis graph performs statistical data analyis from the video processing steps. A graph is given as output which gives the percentage ratio of each emotion in the video, grouped into several age-groups as well as the genders. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>

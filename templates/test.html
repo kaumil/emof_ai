@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Softvan Products</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/test.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/animate.css') }}">
+</head>
+<style>
+    .main {
+        min-height: 540px;
+    }
+</style>
+<body>
+<div>
+    <div class='main'>
+        <div class="div-softvan">
+            <img class="logo animated flash" src="{{ url_for('static',filename='images/logo.png') }}"
+                 alt="Softvan Logo">
+            <h3 class="heading animated bounceInDown">Softvan Products</h3>
+        </div>
+        <div class="div-products flash ">
+            <ul class="product-list">
+
+                 <li>
+                    <div class="product animated zoomIn">
+                        <a href="/cancer_detection.html">
+                            <img class="product-img" src="{{ url_for('static',filename='images/cancerDetection.jpg') }}"
+                                 alt="image">
+                            Cancer Detection </a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

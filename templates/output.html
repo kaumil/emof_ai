@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Expression Detection</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<style>
+.sample-image img {
+    width: 80%;
+    margin-left: 13px;
+    height: 600px;
+}
+.sample-image-output img {
+    width: 100%;
+    height: 120px;
+}
+.video-div{
+    margin: auto;
+    width: 640px;
+    border: 2px solid whitesmoke;
+    padding: 10px;
+    }
+body{
+background-image: url('static/images/white.jpg');
+}
+
+</style>
+<body>
+    <div class="main">
+        <!--<div class="main-head">-->
+            <!--<h3>Output</h3>-->
+            <!--<h5>Upload Video</h5>-->
+            <!--<form  method='POST' enctype="multipart/form-data">-->
+
+               <!--<input type="file" name="file"  id="file_upload" disabled>-->
+               <!--<input type="button" value="Upload" id="btn_upload" >-->
+
+             <!--</form>-->
+        <!--</div>-->
+       
+        <div class="main-body">
+            <!--<h3 class="sample-image-head">Our Results</h3>-->
+            <!--<h3 style="color:red;">Note:: Here is sample video for Cancer detection. For more details contact to sales@softvan.in </h3>-->
+            <div class="video-div">
+                <video type="video/webm" width="640" src="{{ url_for('static',filename='videos/temp_detected.webm') }}" controls></video>
+
+            </div>
+             <ul class="list-images">
+
+           <li>
+
+               <div class="sample-image" id='image1'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+
+                   <img src="{{url_for('static',filename='images/video_analysis_graph.jpg')}}" alt="Image not found" height="900px" width="1800px">
+
+               </div>
+
+           </li>
+
+
+             </ul>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='js/samples.js') }}"></script>
+
+    <script src="{{ url_for('static',filename='js/validation.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helemet Detection Demo</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<style>
+    .sample-image img {
+        width: 90%;
+        margin-left: 13px;
+        height: 160px;
+    }
+
+    .sample-image-output img {
+        width: 100%;
+        height: 120px;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="main-head">
+        <h3>Object Detection</h3>
+        <h5>Upload Image</h5>
+        <form action="/detect" method='POST' enctype="multipart/form-data">
+
+            <input type="file" name="file" id="file_upload">
+            <input type="submit" value="Upload" id="btn_upload">
+
+        </form>
+    </div>
+    <div class="main-body">
+        <h3 class="sample-image-head">Our Results</h3>
+        <h3 style="color: red"> How to use :: Please upload the photo and in few secound you will get the whiteboard is
+            clean or not. Sample images are uploaded below. </h3>
+        <ul class="list-images">
+            <li>
+                <div class="sample-image" id='image1'>
+                    <img src="{{url_for('static',filename='images/board_sample/1.jpg')}}" alt="" />
+                </div>
+            </li>
+            <li>
+                <div class="sample-image" id='image2'>
+                    <img src=" {{url_for('static',filename='images/board_sample/2.jpg')}}" alt="" />
+                </div>
+            </li>
+            <li>
+                <div class="sample-image" id='image3'>
+                    <img src=" {{url_for('static',filename='images/board_sample/3.jpg')}}" alt="" />
+                </div>
+            </li>
+            <li>
+                <div class="sample-image" id='image4'>
+                    <img src=" {{url_for('static',filename='images/board_sample/4.jpg')}} " alt="" />
+                </div>
+            </li>
+            <li>
+                <div class="sample-image" id='image5'>
+                    <img src="  {{url_for('static',filename='images/board_sample/5.jpg')}}  " alt="" />
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="main-body">
+        <ul class="list-images">
+            <li>
+                <div class="sample-image-output" id="sample1">
+                    <img src=" {{url_for('static',filename='images/board_sample/1_out.png')}}" alt="" />
+                </div>
+            </li>
+            <li>
+                <div class="sample-image-output" id="sample2">
+                    <img src=" {{url_for('static',filename='images/board_sample/2_out.png')}}" alt=""/>
+                </div>
+            </li>
+            <li>
+                <div class="sample-image-output" id="sample3">
+                    <img src=" {{url_for('static',filename='images/board_sample/3_out.png')}}" alt=""/>
+                </div>
+            </li>
+            <li>
+                <div class="sample-image-output" id="sample4">
+                    <img src=" {{url_for('static',filename='images/board_sample/4_out.png')}}" alt=""/>
+                </div>
+            </li>
+            <li>
+                <div class="sample-image-output" id="sample5">
+                    <img src="  {{url_for('static',filename='images/board_sample/5_out.png')}}" alt=""/>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ url_for('static',filename='js/samples.js') }}"></script>
+
+{#
+<script src="{{ url_for('static',filename='js/validation.js') }}"></script>
+#}
+</body>
+</html>
