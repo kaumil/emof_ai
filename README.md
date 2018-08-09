@@ -30,4 +30,3 @@ Run the command "pip install -r requirements.txt" to install the requirements. <
 ## Authors
 
 * **Kaumil Trivedi** - [kaumil](https://github.com/kaumil)
-* **Dhrumil Sheth**
