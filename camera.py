@@ -45,10 +45,11 @@ def start_app(path):
     frame_h = int(rgb.get(cv2.CAP_PROP_FRAME_HEIGHT))
     frame_w = int(rgb.get(cv2.CAP_PROP_FRAME_WIDTH))
     
-    #video_out=video_path[:-4]+'_detected'+video_path[-4:]
-    video_out = video_path[:-4] + '_detected.webm'
+    video_out=video_path[:-4]+'_detected'+video_path[-4:]
+    #video_out = video_path[:-4] + '_detected.webm'
+    video_writer = cv2.VideoWriter(video_out,cv2.VideoWriter_fourcc('F','M','P','4'), 5.0,(frame_w, frame_h))
     #outputdata = video_out.astype(np.uint8)
-    video_writer = cv2.VideoWriter(video_out,cv2.VideoWriter_fourcc(*'VP80'), 5.0,(frame_w, frame_h))
+    #video_writer = cv2.VideoWriter(video_out,cv2.VideoWriter_fourcc(*'VP80'), 5.0,(frame_w, frame_h))
     #video_writer = cv2.VideoWriter(video_out, -1, 5.0, (frame_w, frame_h))
     #skvideo.io.FFmpegWriter(video_out+".mp4",video_out,outputdict='libx264')
     while True:
