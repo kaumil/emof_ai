@@ -10,14 +10,12 @@ EMOTIONS_LIST = ["Angry", "Disgust",
 
 with open('face_model.json', "r") as json_file:
          loaded_model_json = json_file.read()
-         #print(loaded_model_json)
          loaded_model = model_from_json(loaded_model_json)
-         print('----------',loaded_model)
+      
         # load weights into the new model
 loaded_model.load_weights('face_model1.h5')
 graph = tf.get_default_graph()
 print("Model loaded from disk")
-loaded_model.summary()
 
 def predict_emotion(img):
     #print("---------------",img)
