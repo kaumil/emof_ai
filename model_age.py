@@ -13,7 +13,7 @@ with open('models/model_age_IMDB_gpu.json', "r") as json_file:
         # load weights into the new model
 loaded_model1.load_weights('models/model_age_IMDB_gpu.h5')
 graph = tf.get_default_graph()
-print("Model loaded from disk")
+print("Age model loaded from disk")
 
 def predict_age(img):
     #model._make_prediction_function()  # added
