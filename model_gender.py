@@ -12,8 +12,7 @@ with open('models/gender_model_imdb_gpu.json', "r") as json_file:
         # load weights into the new model
 loaded_model.load_weights('models/gender_model_imdb_gpu.h5')
 graph = tf.get_default_graph()
-print("Model loaded from disk")
-loaded_model.summary()
+print("Gender model loaded from disk")
 
 def predict_gender(img):
     global graph
