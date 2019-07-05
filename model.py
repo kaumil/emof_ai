@@ -15,7 +15,7 @@ with open('face_model.json', "r") as json_file:
         # load weights into the new model
 loaded_model.load_weights('face_model1.h5')
 graph = tf.get_default_graph()
-print("Model loaded from disk")
+print("Face model loaded from disk")
 
 def predict_emotion(img):
     #print("---------------",img)
