@@ -1,5 +1,6 @@
 import cv2
-from model_age import predict_emotion
+from model_age import predict_age
+from model import model
 import numpy as np
 
 rgb = cv2.VideoCapture('a12.mpg')
@@ -35,7 +36,6 @@ def start_app():
         for (x, y, w, h) in faces:
             fc = gray_fr[y:y+h, x:x+w]
             #print(fc)
-            fc = cv2.cvtColor(fc,cv2.COLOR_GRAY2BGR)
             roi = cv2.resize(fc, (48, 48))
             #print(roi[np.newaxis, :].shape)
             pred = predict_emotion(roi[np.newaxis, :])

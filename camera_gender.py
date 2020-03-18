@@ -1,5 +1,6 @@
 import cv2
-from model_gender import predict_emotion
+from model_gender import predict_gender
+from model import predict_emotion
 import numpy as np
 
 rgb = cv2.VideoCapture('a11.mpg')
